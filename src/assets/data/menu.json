@@ -325,6 +325,19 @@
           "type": "link"
         }
       ]
+    },
+    {
+      "route": "testmodul",
+      "name": "testmodul",
+      "type": "sub",
+      "icon": "color_lens",
+      "children": [
+        {
+          "route": "testpage",
+          "name": "testpage",
+          "type": "link"
+        }
+      ]
     }
   ]
 }

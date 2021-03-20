@@ -1,10 +1,12 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {enableProdMode} from '@angular/core';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
+import {AppModule} from './app/app.module';
+import {environment} from './environments/environment';
+import 'bootstrap';
+// 在 npm i jquery popper.js 之后，可以用上面的 import 'bootstrap'; 引入 bootstrap对应的js ！！ 而不用在 index.html那里用粗暴的cdn方式引入
+import {hmrBootstrap} from './hmr';
 
-import { hmrBootstrap } from './hmr';
 
 declare const module: any;
 
