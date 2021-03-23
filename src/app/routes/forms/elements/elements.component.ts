@@ -1,8 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { DateAdapter } from '@angular/material/core';
-import { Subscription } from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {DateAdapter} from '@angular/material/core';
+import {Subscription} from 'rxjs';
+import {TranslateService} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-forms-elements',
@@ -69,4 +70,6 @@ export class FormsElementsComponent implements OnInit, OnDestroy {
       ? 'validations.invalid_email'
       : '';
   }
+
+
 }

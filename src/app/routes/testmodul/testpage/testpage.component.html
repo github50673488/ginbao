@@ -1,20 +1,38 @@
 <page-header></page-header>
 
-<div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
-</div>
+<button mat-raised-button color="primary" (click)="testgrpc()">testgrpc</button>
 
 
-<!-- Example single danger button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
-  </div>
-</div>
+<section>
+  <h2>Basic Table</h2>
+  <p>Shows name, color and age data.</p>
+  <mat-table aria-readonly="true"
+             [dataSource]="basicDataSource"
+             aria-label="Users favorite colors and age">
+    <ng-container cdkColumnDef="date">
+      <mat-header-cell *cdkHeaderCellDef>Date</mat-header-cell>
+      <mat-cell *cdkCellDef="let row;">{{row.date.ToDiagnosticString}}</mat-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="temperaturec">
+      <mat-header-cell *cdkHeaderCellDef>Temperaturec</mat-header-cell>
+      <mat-cell *cdkCellDef="let row;">{{row.temperaturec}}</mat-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="summary">
+      <mat-header-cell *cdkHeaderCellDef>Summary</mat-header-cell>
+      <mat-cell *cdkCellDef="let row;">{{row.summary}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</section>
+
+<br>
+<hr>
+<h2>Data Json</h2>
+
+<pre>
+  {{
+  teachers | json
+  }}
+</pre>
