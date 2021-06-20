@@ -28,6 +28,7 @@ const routes: Routes = [
         data: {title: 'Sessions', titleI18n: 'Sessions'},
       },
       {path: 'testmodul', loadChildren: () => import('./testmodul/testmodul.module').then(m => m.TestmodulModule)},
+      {path: 'tpscripttest', loadChildren: () => import('./tpscripttest/tpscripttest.module').then(m => m.TpscripttestModule)},
       {
         path: 'design',
         loadChildren: () => import('./design/design.module').then(m => m.DesignModule),

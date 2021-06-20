@@ -338,6 +338,24 @@
           "type": "link"
         }
       ]
+    },
+    {
+      "route": "tpscripttest",
+      "name": "tpscripttest",
+      "type": "sub",
+      "icon": "color_lens",
+      "children": [
+        {
+          "route": "testpage",
+          "name": "testpage",
+          "type": "link"
+        },
+        {
+          "route": "test210621",
+          "name": "test210621",
+          "type": "link"
+        }
+      ]
     }
   ]
 }
